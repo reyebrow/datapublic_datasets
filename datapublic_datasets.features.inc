@@ -41,14 +41,6 @@ function datapublic_datasets_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
-    'page' => array(
-      'name' => t('Site Page'),
-      'base' => 'node_content',
-      'description' => t('A  simple page of static HTML content, to be used for infrequently updated information.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
   );
   return $items;
 }
