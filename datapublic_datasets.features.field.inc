@@ -1140,10 +1140,9 @@ other|Other (API)',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'computed_field',
+          'label' => 'hidden',
           'settings' => array(),
-          'type' => 'computed_field_default',
+          'type' => 'hidden',
           'weight' => '18',
         ),
         'teaser' => array(

@@ -6,7 +6,6 @@
 
 include_once('datapublic_datasets.features.inc');
 include_once('datapublic_datasets.theme.inc');
-
 /**
  * These functions determine the values for the CCK computed fields.
  * @see http://drupal.org/node/149225
@@ -56,7 +55,6 @@ function computed_field_field_dataset_api_compute(&$entity_field, $entity_type, 
  * @return string The themed format value to populate the computed, if the actual CCK format field is set.
  */
 function datapublic_datasets_format_checker(&$entity, $field_collection_ids, $field_ids_to_check, $format, $langcode) {
-  
   // Loop through the field_collection fields...
   foreach($field_collection_ids as $field_collection_id) {
     
@@ -64,15 +62,14 @@ function datapublic_datasets_format_checker(&$entity, $field_collection_ids, $fi
     foreach ($entity->{$field_collection_id}[$langcode] as $entity_id) {
     
       $new_entity = entity_load('field_collection_item', array($entity_id['value']));
-    
       // Now check the new entity to see if it contains any of the field's (field_ids_to_check) we're looking for...
       foreach($field_ids_to_check as $field_id_to_check) {
-    
         if(isset($new_entity[$entity_id['value']]->{$field_id_to_check})) {
           $format_field_value = $new_entity[$entity_id['value']]->{$field_id_to_check}[$langcode][0]['value'];
           // If the format value in the field matches the format we're checking for...
           if($format == $format_field_value) {
             $formats[] = $format;
+            watchdog('datasets', '<pre>'. print_r(theme('dataset_indicators', $formats), TRUE) . '</pre>');
             break 3; // We've gotten what we need, now break out of the 3 for loops, theme and return...
           // If the format is the API we must return whatever the user has entered...
           } elseif($format == 'API' && !in_array($format_field_value, array('CSV', 'DWG', 'KML', 'KMZ', 'SHP', 'XLS', 'XML'))) {

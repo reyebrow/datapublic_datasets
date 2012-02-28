@@ -17,15 +17,13 @@
  * proper hierarchy is established at some point). We check for it just to
  * prevent php warnings and Drupal message reporting these.
  */
-function datapublic_datasets_theme($existing){
-  $template_path = drupal_get_path('module', 'datapublic_datasets') . "/theme";
-	
-	$item_dataset = $existing['node'];
-	$item_dataset['path'] = $template_path;
-	$item_dataset['template'] = 'node--dataset';
+function datapublic_datasets_theme($existing, $type, $theme, $path) {  
+  $dataset = isset($existing['node']) ? $existing['node'] : array();
+  $dataset['path'] = $path . '/theme';
+  $dataset['template'] = 'node--dataset';
 	
   return array(
-    'node__dataset' => $item_dataset,
+    'node__dataset' => $dataset,
     'dataset_indicators' => array(
       'variables' => NULL
     ),
@@ -38,6 +36,7 @@ function datapublic_datasets_theme($existing){
  * indicators in a span for ease of theming.
  */
 function theme_dataset_indicators($variables) {
+  $output = '';
   if(count($variables) > 0) {
     foreach($variables as $indicator) {
       $output .= '<span>' . $indicator . '</span>';

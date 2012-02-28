@@ -158,6 +158,7 @@ function datapublic_datasets_views_default_views() {
   $handler->display->display_options['fields']['field_dataset_csv']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_dataset_csv']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_dataset_csv']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['field_dataset_csv']['type'] = 'computed_field_unsanitized';
   $handler->display->display_options['fields']['field_dataset_csv']['field_api_classes'] = 0;
   /* Field: Content: DWG Indicator */
   $handler->display->display_options['fields']['field_dataset_dwg']['id'] = 'field_dataset_dwg';
@@ -181,6 +182,7 @@ function datapublic_datasets_views_default_views() {
   $handler->display->display_options['fields']['field_dataset_dwg']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_dataset_dwg']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_dataset_dwg']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['field_dataset_dwg']['type'] = 'computed_field_unsanitized';
   $handler->display->display_options['fields']['field_dataset_dwg']['field_api_classes'] = 0;
   /* Field: Content: KML Indicator */
   $handler->display->display_options['fields']['field_dataset_kml']['id'] = 'field_dataset_kml';
@@ -204,6 +206,7 @@ function datapublic_datasets_views_default_views() {
   $handler->display->display_options['fields']['field_dataset_kml']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_dataset_kml']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_dataset_kml']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['field_dataset_kml']['type'] = 'computed_field_unsanitized';
   $handler->display->display_options['fields']['field_dataset_kml']['field_api_classes'] = 0;
   /* Field: Content: KMZ Indicator */
   $handler->display->display_options['fields']['field_dataset_kmz']['id'] = 'field_dataset_kmz';
@@ -227,6 +230,7 @@ function datapublic_datasets_views_default_views() {
   $handler->display->display_options['fields']['field_dataset_kmz']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_dataset_kmz']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_dataset_kmz']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_dataset_kmz']['type'] = 'computed_field_unsanitized';
   $handler->display->display_options['fields']['field_dataset_kmz']['field_api_classes'] = 0;
   /* Field: Content: SHP Indicator */
   $handler->display->display_options['fields']['field_dataset_shp']['id'] = 'field_dataset_shp';
@@ -250,6 +254,7 @@ function datapublic_datasets_views_default_views() {
   $handler->display->display_options['fields']['field_dataset_shp']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_dataset_shp']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_dataset_shp']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_dataset_shp']['type'] = 'computed_field_unsanitized';
   $handler->display->display_options['fields']['field_dataset_shp']['field_api_classes'] = 0;
   /* Field: Content: XLS Indicator */
   $handler->display->display_options['fields']['field_dataset_xls']['id'] = 'field_dataset_xls';
@@ -273,6 +278,7 @@ function datapublic_datasets_views_default_views() {
   $handler->display->display_options['fields']['field_dataset_xls']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_dataset_xls']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_dataset_xls']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_dataset_xls']['type'] = 'computed_field_unsanitized';
   $handler->display->display_options['fields']['field_dataset_xls']['field_api_classes'] = 0;
   /* Field: Content: XML Indicator */
   $handler->display->display_options['fields']['field_dataset_xml']['id'] = 'field_dataset_xml';
@@ -296,6 +302,7 @@ function datapublic_datasets_views_default_views() {
   $handler->display->display_options['fields']['field_dataset_xml']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_dataset_xml']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_dataset_xml']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_dataset_xml']['type'] = 'computed_field_unsanitized';
   $handler->display->display_options['fields']['field_dataset_xml']['field_api_classes'] = 0;
   /* Field: Content: API Indicator */
   $handler->display->display_options['fields']['field_dataset_api']['id'] = 'field_dataset_api';
@@ -319,6 +326,7 @@ function datapublic_datasets_views_default_views() {
   $handler->display->display_options['fields']['field_dataset_api']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_dataset_api']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_dataset_api']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_dataset_api']['type'] = 'computed_field_unsanitized';
   $handler->display->display_options['fields']['field_dataset_api']['field_api_classes'] = 0;
   /* Sort criterion: Content statistics: Total views */
   $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
