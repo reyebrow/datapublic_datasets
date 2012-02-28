@@ -1,7 +1,7 @@
 name = "DataPublic Datasets"
 description = "Datasets features for DataPublic distribution"
 core = "7.x"
-package = "Features"
+package = "Datapublic"
 dependencies[] = "addressfield"
 dependencies[] = "cck_select_other"
 dependencies[] = "computed_field"
