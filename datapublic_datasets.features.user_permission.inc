@@ -37,7 +37,6 @@ function datapublic_datasets_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'staff',
     ),
     'module' => 'node',
   );
