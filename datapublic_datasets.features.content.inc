@@ -28,7 +28,7 @@ function datapublic_datasets_content_defaults() {
       'external' => '0',
       'has_children' => '0',
       'expanded' => '0',
-      'weight' => '0',
+      'weight' => '10',
       'parent_path' => 'node-name/resources_page',
       'identifier' => 'main-menu:node-name/datasets_page',
     ),
